@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.title{ 
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.hr{
+    display: flex;
+    border: 1px solid #5691ff;
+    margin: 1rem 0;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5691ff;
+    height: 100vh;
+}
+.noTours{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5691ff;
+}
+.refresh{
+    background-color: #5691ff;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem 0;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    
+}

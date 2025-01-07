@@ -1,8 +1,9 @@
 import { useState } from "react";
+import styles from "../styles/List.module.css";
 
 export default function List(props) {
     return (
-      <ul>
+      <ul className={styles.list}>
         {props.list.map((item) => (
           <Item key={item.id} {...item} onRemoveItem={props.onRemoveItem} />
         ))}
@@ -15,14 +16,13 @@ export default function List(props) {
     const [readMore, setReadMore] = useState(false);
 
     return (
-      <li>
-        <h1>{name}</h1>
-        <img src={image} alt={name} width={100} />
-        <h4>{name}</h4>
-        <h5>{price}</h5>
+      <li className={styles.tour}>
+        <h1 className={styles.name}>{name}</h1>
+        <img className={styles.image} src={image} alt={name}/>
+        <h5 className={styles.price}>{price}</h5>
         {readMore ? info : `${info.substring(0, 100)}`}
-        <button className="btn" onClick={() => setReadMore(!readMore)}>{readMore ? "Show less" : "Show more"}</button>
-        <button onClick={() => onRemoveItem(id)}>Not Interested</button>
+        <button className={styles.show} onClick={() => setReadMore(!readMore)}>{readMore ? "Show less" : "Show more"}</button>
+        <button className={styles.delete} onClick={() => onRemoveItem(id)}>Not Interested</button>
       </li>
     );
   }
