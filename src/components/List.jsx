@@ -19,7 +19,7 @@ export default function List(props) {
       <li className={styles.tour}>
         <h1 className={styles.name}>{name}</h1>
         <img className={styles.image} src={image} alt={name}/>
-        <h5 className={styles.price}>{price}</h5>
+        <h5 className={styles.price}>{price} €</h5>
         {readMore ? info : `${info.substring(0, 100)}`}
         <button className={styles.show} onClick={() => setReadMore(!readMore)}>{readMore ? "Show less" : "Show more"}</button>
         <button className={styles.delete} onClick={() => onRemoveItem(id)}>Not Interested</button>

@@ -42,8 +42,11 @@ export default function App() {
       {isLoading && <h2 className={styles.loading}>Loading...</h2>}
       {numberOfTours === 0 && isLoading === false && (
         <>
+        <div className={styles.secondContainer}>
           <h2 className={styles.noTours}>No tours left</h2>
           <button className={styles.refresh} onClick={() => window.location.reload()}>Refresh Tours</button>
+        </div>
+
         </>
       )}
       <List list={tour} onRemoveItem={handleRemoveItem}/>
